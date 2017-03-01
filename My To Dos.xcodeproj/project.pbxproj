@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD9484BD1E6665C60045BBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484BC1E6665C60045BBB8 /* AppDelegate.swift */; };
-		AD9484BF1E6665C60045BBB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484BE1E6665C60045BBB8 /* ViewController.swift */; };
+		AD9484BF1E6665C60045BBB8 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */; };
 		AD9484C21E6665C60045BBB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9484C01E6665C60045BBB8 /* Main.storyboard */; };
 		AD9484C41E6665C60045BBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9484C31E6665C60045BBB8 /* Assets.xcassets */; };
 		AD9484C71E6665C60045BBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9484C51E6665C60045BBB8 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		AD9484B91E6665C60045BBB8 /* My To Dos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My To Dos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9484BC1E6665C60045BBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD9484BE1E6665C60045BBB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		AD9484C11E6665C60045BBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD9484C31E6665C60045BBB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD9484C61E6665C60045BBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				AD9484BC1E6665C60045BBB8 /* AppDelegate.swift */,
-				AD9484BE1E6665C60045BBB8 /* ViewController.swift */,
+				AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */,
 				AD9484C01E6665C60045BBB8 /* Main.storyboard */,
 				AD9484C31E6665C60045BBB8 /* Assets.xcassets */,
 				AD9484C51E6665C60045BBB8 /* LaunchScreen.storyboard */,
@@ -193,7 +193,7 @@
 				TargetAttributes = {
 					AD9484B81E6665C60045BBB8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6X5B26J782;
+						DevelopmentTeam = MN7M8QM5TR;
 						ProvisioningStyle = Automatic;
 					};
 					AD9484CC1E6665C60045BBB8 = {
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD9484BF1E6665C60045BBB8 /* ViewController.swift in Sources */,
+				AD9484BF1E6665C60045BBB8 /* NoteViewController.swift in Sources */,
 				AD9484BD1E6665C60045BBB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6X5B26J782;
+				DEVELOPMENT_TEAM = MN7M8QM5TR;
 				INFOPLIST_FILE = "My To Dos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.uregina.cs.855.patel38b.My-To-Dos";
@@ -428,7 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6X5B26J782;
+				DEVELOPMENT_TEAM = MN7M8QM5TR;
 				INFOPLIST_FILE = "My To Dos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.uregina.cs.855.patel38b.My-To-Dos";
@@ -514,6 +514,7 @@
 				AD9484E31E6665C60045BBB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD9484E41E6665C60045BBB8 /* Build configuration list for PBXNativeTarget "My To DosTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				AD9484E61E6665C60045BBB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD9484E71E6665C60045BBB8 /* Build configuration list for PBXNativeTarget "My To DosUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				AD9484E91E6665C60045BBB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
