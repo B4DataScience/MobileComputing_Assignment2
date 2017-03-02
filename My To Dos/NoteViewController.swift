@@ -8,11 +8,18 @@
 
 import UIKit
 
-class NoteViewController: UIViewController {
+class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
+    //MARK: Properties
+    @IBOutlet weak var notetitle: UITextField!
+    @IBOutlet weak var notebody: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        notetitle.delegate = self//for delegate calls
+        notebody.delegate = self
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +27,21 @@ class NoteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //Mark: Textfield(title) delegate methods
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        notebody.becomeFirstResponder()
+        return true
+    }
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if(textView.text=="Write your note here"){
+            textView.text=nil;
+        }
+    }
+    
 
 }
 
