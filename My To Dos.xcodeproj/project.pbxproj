@@ -10,7 +10,6 @@
 		AD9484BD1E6665C60045BBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484BC1E6665C60045BBB8 /* AppDelegate.swift */; };
 		AD9484BF1E6665C60045BBB8 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */; };
 		AD9484C21E6665C60045BBB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9484C01E6665C60045BBB8 /* Main.storyboard */; };
-		AD9484C41E6665C60045BBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9484C31E6665C60045BBB8 /* Assets.xcassets */; };
 		AD9484C71E6665C60045BBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9484C51E6665C60045BBB8 /* LaunchScreen.storyboard */; };
 		AD9484D21E6665C60045BBB8 /* My_To_DosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484D11E6665C60045BBB8 /* My_To_DosTests.swift */; };
 		AD9484DD1E6665C60045BBB8 /* My_To_DosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484DC1E6665C60045BBB8 /* My_To_DosUITests.swift */; };
@@ -39,7 +38,6 @@
 		AD9484BC1E6665C60045BBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		AD9484C11E6665C60045BBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AD9484C31E6665C60045BBB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD9484C61E6665C60045BBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD9484C81E6665C60045BBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD9484CD1E6665C60045BBB8 /* My To DosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My To DosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +101,6 @@
 				AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */,
 				AD9484C01E6665C60045BBB8 /* Main.storyboard */,
 				ADE880251E67C76300EF4E7E /* Note.swift */,
-				AD9484C31E6665C60045BBB8 /* Assets.xcassets */,
 				AD9484C51E6665C60045BBB8 /* LaunchScreen.storyboard */,
 				AD9484C81E6665C60045BBB8 /* Info.plist */,
 			);
@@ -239,7 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9484C71E6665C60045BBB8 /* LaunchScreen.storyboard in Resources */,
-				AD9484C41E6665C60045BBB8 /* Assets.xcassets in Resources */,
 				AD9484C21E6665C60045BBB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,18 +8,25 @@
 
 import UIKit
 
-class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //MARK: Properties
     @IBOutlet weak var notetitle: UITextField!
     @IBOutlet weak var notebody: UITextView!
+    @IBOutlet weak var viewphoto: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         notetitle.delegate = self//for delegate calls
         notebody.delegate = self
-
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+        let gallaryButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.camera, target: self, action: #selector(self.addPhotoFromLibrary))
+        toolBar.setItems([doneButton,gallaryButton], animated: false)
+        notebody.inputAccessoryView = toolBar
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +49,47 @@ class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         }
     }
     
+    //MARK: UIImagePickerControllerDelegate
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        // Dismiss the picker if the user canceled.
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        // The info dictionary may contain multiple representations of the image. You want to use the original.
+        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        
+        // Set photoImageView to display the selected image.
+        viewphoto.image = selectedImage
+        
+        // Dismiss the picker.
+        dismiss(animated: true, completion: nil)
+    }
+    
+
+    
+    //MARK: Actions
+    
+    func doneClicked(){
+        view.endEditing(true)
+    }
+    func addPhotoFromLibrary(){
+        notetitle.resignFirstResponder()
+        notebody.resignFirstResponder()
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
 
 }
 
