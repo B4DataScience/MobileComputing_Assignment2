@@ -41,7 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow camera to add photo to your note.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow to select photo!</string>
+	<string>Allow to add photo to your note.</string>
 </dict>
 </plist>

@@ -25,8 +25,10 @@ class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
-        let gallaryButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.camera, target: self, action: #selector(self.addPhotoFromLibrary))
-        toolBar.setItems([doneButton,gallaryButton], animated: false)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let cameraButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.camera, target: self, action: #selector(self.addPhotoUsingCamera))
+        let photoLibraryButton = UIBarButtonItem(image: #imageLiteral(resourceName: "photoLibrary"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.addPhotoFromLibrary))
+        toolBar.setItems([photoLibraryButton,flexibleSpace,cameraButton,flexibleSpace,doneButton], animated: false)
         notebody.inputAccessoryView = toolBar
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 10.0
@@ -88,14 +90,19 @@ class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         view.endEditing(true)
     }
     func addPhotoFromLibrary(){
-        notetitle.resignFirstResponder()
         notebody.resignFirstResponder()
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
-        imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
         
+    }
+    func addPhotoUsingCamera(){
+        notebody.resignFirstResponder()
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
 
 }
