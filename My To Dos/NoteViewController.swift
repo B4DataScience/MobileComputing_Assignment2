@@ -8,24 +8,28 @@
 
 import UIKit
 
-class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
 
     //MARK: Properties
     @IBOutlet weak var notetitle: UITextField!
     @IBOutlet weak var notebody: UITextView!
     @IBOutlet weak var viewphoto: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         notetitle.delegate = self//for delegate calls
         notebody.delegate = self
+        scrollView.delegate = self
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
         let gallaryButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.camera, target: self, action: #selector(self.addPhotoFromLibrary))
         toolBar.setItems([doneButton,gallaryButton], animated: false)
         notebody.inputAccessoryView = toolBar
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 10.0
         
     }
 
@@ -72,7 +76,10 @@ class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
     }
-    
+    //MARK: Scroll view delegate methods
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.viewphoto
+    }
 
     
     //MARK: Actions
