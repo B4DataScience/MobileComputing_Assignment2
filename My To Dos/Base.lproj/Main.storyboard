@@ -22,98 +22,113 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qay-0i-2hj">
-                                <rect key="frame" x="16" y="28" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Fx-LZ-1c2">
-                                <rect key="frame" x="16" y="66" width="343" height="573"/>
+                            <stackView opaque="NO" tag="8" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pN8-ha-erC" userLabel="mainStack">
+                                <rect key="frame" x="16" y="28" width="343" height="620"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jH0-rR-n0u" userLabel="textScrollView">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="283"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HJH-lX-Odg" userLabel="titleStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="283" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bA1-9y-apk">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <mutableString key="text">he key thing to understand is that UIScrollView evaluates its size at runtime based on the content - link needed. For this reason when in IB you will always see it as having 0 width and 0 height (really).
-
-Using a content view with the same width or height as the superview where the scroll view is contained does the trick of allowing us to define the subview’s Auto Layout constraints, but only if the subviews as a whole are pinned to the edges of the content view.
-
-Finally, since we need to use the content view width to set the UIScrollView he key thing to understand is that UIScrollView evaluates its size at runtime based on the content - link needed. For this reason when in IB you will always see it as having 0 width and 0 height (really).
-
-Using a content view with the same width or height as the superview where the scroll view is contained does the trick of allowing us to define the subview’s Auto Layout constraints, but only if the subviews as a whole are pinned to the edges of the content view.
-
-Finally, since we need to use the content view width to set the UIScrollView he key thing to understand is that UIScrollView evaluates its size at runtime based on the content - link needed. For this reason when in IB you will always see it as having 0 width and 0 height (really).
-
-Using a content view with the same width or height as the superview where the scroll view is contained does the trick of allowing us to define the subview’s Auto Layout constraints, but only if the subviews as a whole are pinned to the edges of the content view.
-
-Finally, since we need to use the content view width to set the UIScrollView </mutableString>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oMm-Ao-H25" userLabel="noteTitle">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="63F-7R-EWs" userLabel="noteBodyStack">
+                                        <rect key="frame" x="0.0" y="38" width="343" height="582"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XW9-gc-jd4" userLabel="textScrollStack">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="287"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4U-bG-jaw" userLabel="textViewScroll">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="287"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TAx-VC-OMZ" userLabel="noteBody">
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="286.5"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" secondItem="TAx-VC-OMZ" secondAttribute="height" id="1RH-qv-IGE"/>
+                                                            <constraint firstAttribute="bottom" secondItem="TAx-VC-OMZ" secondAttribute="bottom" constant="0.5" id="6i3-mc-IWE"/>
+                                                            <constraint firstAttribute="width" secondItem="TAx-VC-OMZ" secondAttribute="width" id="7bA-Xd-wNe"/>
+                                                            <constraint firstItem="TAx-VC-OMZ" firstAttribute="leading" secondItem="p4U-bG-jaw" secondAttribute="leading" id="Oe4-Zp-J4u"/>
+                                                            <constraint firstAttribute="trailing" secondItem="TAx-VC-OMZ" secondAttribute="trailing" id="WTh-9i-9A0"/>
+                                                            <constraint firstItem="TAx-VC-OMZ" firstAttribute="top" secondItem="p4U-bG-jaw" secondAttribute="top" id="Xc6-9o-tUL"/>
+                                                        </constraints>
+                                                    </scrollView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XtK-A1-wBa" userLabel="imageScrollStack">
+                                                <rect key="frame" x="0.0" y="295" width="343" height="287"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKx-Np-U2T" userLabel="imageScroll">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="287"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LAB-JK-X3L" userLabel="notePhoto">
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="286.5"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="LAB-JK-X3L" secondAttribute="bottom" constant="0.5" id="0GJ-sI-H25"/>
+                                                            <constraint firstItem="LAB-JK-X3L" firstAttribute="leading" secondItem="WKx-Np-U2T" secondAttribute="leading" id="C4x-At-Crc"/>
+                                                            <constraint firstItem="LAB-JK-X3L" firstAttribute="top" secondItem="WKx-Np-U2T" secondAttribute="top" id="OtF-Ds-bl9"/>
+                                                            <constraint firstAttribute="width" secondItem="LAB-JK-X3L" secondAttribute="width" id="g4N-BD-bab"/>
+                                                            <constraint firstAttribute="height" secondItem="LAB-JK-X3L" secondAttribute="height" id="qXl-0D-bta"/>
+                                                            <constraint firstAttribute="trailing" secondItem="LAB-JK-X3L" secondAttribute="trailing" id="w6R-Rd-434"/>
+                                                        </constraints>
+                                                    </scrollView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="bA1-9y-apk" secondAttribute="bottom" id="8pv-6M-FCw"/>
-                                            <constraint firstItem="bA1-9y-apk" firstAttribute="leading" secondItem="jH0-rR-n0u" secondAttribute="leading" id="TnS-XB-u13"/>
-                                            <constraint firstItem="bA1-9y-apk" firstAttribute="top" secondItem="jH0-rR-n0u" secondAttribute="top" id="j1W-wr-HX1"/>
-                                            <constraint firstAttribute="trailing" secondItem="bA1-9y-apk" secondAttribute="trailing" id="jPc-pT-LhC"/>
+                                            <constraint firstAttribute="trailing" secondItem="XtK-A1-wBa" secondAttribute="trailing" id="Fq0-zS-7jQ"/>
+                                            <constraint firstItem="XtK-A1-wBa" firstAttribute="top" secondItem="XW9-gc-jd4" secondAttribute="bottom" constant="8" id="Qnf-p9-oeu"/>
+                                            <constraint firstAttribute="trailing" secondItem="XW9-gc-jd4" secondAttribute="trailing" id="Qs6-8i-zXi"/>
+                                            <constraint firstAttribute="bottom" secondItem="XtK-A1-wBa" secondAttribute="bottom" id="g59-hk-vR2"/>
+                                            <constraint firstItem="XW9-gc-jd4" firstAttribute="leading" secondItem="63F-7R-EWs" secondAttribute="leading" id="kVg-IN-gYL"/>
+                                            <constraint firstItem="XW9-gc-jd4" firstAttribute="top" secondItem="63F-7R-EWs" secondAttribute="top" id="l6W-6x-IB3"/>
+                                            <constraint firstItem="XtK-A1-wBa" firstAttribute="leading" secondItem="63F-7R-EWs" secondAttribute="leading" id="snJ-tk-bxo"/>
+                                            <constraint firstItem="XtK-A1-wBa" firstAttribute="top" secondItem="XW9-gc-jd4" secondAttribute="bottom" constant="8" id="tlr-Lm-enG"/>
                                         </constraints>
-                                    </scrollView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaa-0r-hDz" userLabel="imageScrollview">
-                                        <rect key="frame" x="0.0" y="291" width="343" height="282"/>
-                                        <subviews>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="282" image="photoLibrary" translatesAutoresizingMaskIntoConstraints="NO" id="7Gr-dx-Xaq">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="282"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <gestureRecognizers/>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="7Gr-dx-Xaq" firstAttribute="leading" secondItem="Yaa-0r-hDz" secondAttribute="leading" id="48G-ZH-pfh"/>
-                                            <constraint firstAttribute="bottom" secondItem="7Gr-dx-Xaq" secondAttribute="bottom" id="MFg-EL-fBW"/>
-                                            <constraint firstItem="7Gr-dx-Xaq" firstAttribute="top" secondItem="Yaa-0r-hDz" secondAttribute="top" id="O4Q-uW-8iC"/>
-                                            <constraint firstAttribute="trailing" secondItem="7Gr-dx-Xaq" secondAttribute="trailing" id="s5v-02-lUp"/>
-                                        </constraints>
-                                    </scrollView>
+                                        <variation key="heightClass=compact" axis="horizontal"/>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="bA1-9y-apk" firstAttribute="leading" secondItem="1Fx-LZ-1c2" secondAttribute="leading" id="RMr-WP-7XM"/>
-                                    <constraint firstItem="7Gr-dx-Xaq" firstAttribute="leading" secondItem="1Fx-LZ-1c2" secondAttribute="leading" id="UPL-CB-KWw"/>
-                                    <constraint firstAttribute="trailing" secondItem="7Gr-dx-Xaq" secondAttribute="trailing" id="mYi-mX-aIE"/>
-                                    <constraint firstAttribute="trailing" secondItem="bA1-9y-apk" secondAttribute="trailing" id="qwS-w4-Y1s"/>
-                                    <constraint firstAttribute="bottom" secondItem="7Gr-dx-Xaq" secondAttribute="bottom" id="rSa-sL-ocl"/>
-                                    <constraint firstItem="bA1-9y-apk" firstAttribute="top" secondItem="1Fx-LZ-1c2" secondAttribute="top" id="vPa-Kv-HPD"/>
+                                    <constraint firstAttribute="trailing" secondItem="HJH-lX-Odg" secondAttribute="trailing" id="BzW-d3-oIT"/>
+                                    <constraint firstItem="63F-7R-EWs" firstAttribute="top" secondItem="HJH-lX-Odg" secondAttribute="bottom" constant="8" id="Mtf-HE-IkZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="63F-7R-EWs" secondAttribute="trailing" id="QDd-Tb-0qH"/>
+                                    <constraint firstItem="HJH-lX-Odg" firstAttribute="top" secondItem="pN8-ha-erC" secondAttribute="top" id="TBa-eq-cCA"/>
+                                    <constraint firstItem="HJH-lX-Odg" firstAttribute="leading" secondItem="pN8-ha-erC" secondAttribute="leading" id="Yxt-hH-FiI"/>
+                                    <constraint firstAttribute="bottom" secondItem="63F-7R-EWs" secondAttribute="bottom" id="hU9-z8-9is"/>
+                                    <constraint firstItem="63F-7R-EWs" firstAttribute="top" secondItem="HJH-lX-Odg" secondAttribute="bottom" constant="8" id="reX-3N-qqX"/>
+                                    <constraint firstItem="63F-7R-EWs" firstAttribute="leading" secondItem="pN8-ha-erC" secondAttribute="leading" id="vCc-z2-0Or"/>
                                 </constraints>
-                                <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="qay-0i-2hj" secondAttribute="leading" id="2o5-WU-H5Q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1Fx-LZ-1c2" secondAttribute="trailing" id="AW1-u2-vna"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qay-0i-2hj" secondAttribute="trailing" id="SeQ-Yy-nTV"/>
-                            <constraint firstItem="qay-0i-2hj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Wam-b5-uzm"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="1Fx-LZ-1c2" secondAttribute="leading" id="ey0-6M-2Kk"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Fx-LZ-1c2" secondAttribute="bottom" constant="28" id="iuM-8z-6jB"/>
-                            <constraint firstItem="1Fx-LZ-1c2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="ncG-aC-IF5"/>
+                            <constraint firstItem="pN8-ha-erC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ag7-GL-usV"/>
+                            <constraint firstItem="pN8-ha-erC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QVq-ma-nLi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pN8-ha-erC" secondAttribute="bottom" constant="19" id="g8I-aX-wbo"/>
+                            <constraint firstItem="pN8-ha-erC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rv9-gk-9qd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageScrollview" destination="Yaa-0r-hDz" id="hcz-Eb-ldn"/>
-                        <outlet property="notebody" destination="bA1-9y-apk" id="KPf-IF-dPz"/>
-                        <outlet property="notetitle" destination="qay-0i-2hj" id="Tre-VM-Fny"/>
-                        <outlet property="viewphoto" destination="7Gr-dx-Xaq" id="SHf-P0-Kg1"/>
+                        <outlet property="imageScrollview" destination="WKx-Np-U2T" id="XAG-7s-Mkc"/>
+                        <outlet property="notebody" destination="TAx-VC-OMZ" id="DFc-SL-aKb"/>
+                        <outlet property="notetitle" destination="oMm-Ao-H25" id="Ayj-l7-EyO"/>
+                        <outlet property="viewphoto" destination="LAB-JK-X3L" id="isM-BV-FMS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="photoLibrary" width="25" height="25"/>
-    </resources>
 </document>
