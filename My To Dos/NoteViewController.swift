@@ -14,14 +14,15 @@ class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     @IBOutlet weak var notetitle: UITextField!
     @IBOutlet weak var notebody: UITextView!
     @IBOutlet weak var viewphoto: UIImageView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageScrollview: UIScrollView!
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         notetitle.delegate = self//for delegate calls
         notebody.delegate = self
-        scrollView.delegate = self
+        imageScrollview.delegate = self
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
@@ -30,8 +31,8 @@ class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         let photoLibraryButton = UIBarButtonItem(image: #imageLiteral(resourceName: "photoLibrary"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.addPhotoFromLibrary))
         toolBar.setItems([photoLibraryButton,flexibleSpace,cameraButton,flexibleSpace,doneButton], animated: false)
         notebody.inputAccessoryView = toolBar
-        self.scrollView.minimumZoomScale = 1.0
-        self.scrollView.maximumZoomScale = 10.0
+        self.imageScrollview.minimumZoomScale = 1.0
+        self.imageScrollview.maximumZoomScale = 10.0
         
     }
 
