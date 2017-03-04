@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +22,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qay-0i-2hj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qay-0i-2hj">
                                 <rect key="frame" x="16" y="28" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Fx-LZ-1c2">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Fx-LZ-1c2">
                                 <rect key="frame" x="16" y="66" width="343" height="573"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jH0-rR-n0u" userLabel="textScrollView">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="311"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="283"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Write your note here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bA1-9y-apk">
-                                                <rect key="frame" x="8" y="8" width="327" height="295"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Write your note here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bA1-9y-apk">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="283"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -45,11 +43,10 @@
                                         </subviews>
                                     </scrollView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaa-0r-hDz" userLabel="imageScrollview">
-                                        <rect key="frame" x="0.0" y="319" width="343" height="254"/>
+                                        <rect key="frame" x="0.0" y="291" width="343" height="282"/>
                                         <subviews>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Gr-dx-Xaq">
-                                                <rect key="frame" x="8" y="8" width="327" height="238"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Gr-dx-Xaq">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="282"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <gestureRecognizers/>
@@ -57,10 +54,27 @@
                                         </subviews>
                                     </scrollView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="bA1-9y-apk" firstAttribute="leading" secondItem="1Fx-LZ-1c2" secondAttribute="leading" id="RMr-WP-7XM"/>
+                                    <constraint firstItem="7Gr-dx-Xaq" firstAttribute="leading" secondItem="1Fx-LZ-1c2" secondAttribute="leading" id="UPL-CB-KWw"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Gr-dx-Xaq" secondAttribute="trailing" id="mYi-mX-aIE"/>
+                                    <constraint firstAttribute="trailing" secondItem="bA1-9y-apk" secondAttribute="trailing" id="qwS-w4-Y1s"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Gr-dx-Xaq" secondAttribute="bottom" id="rSa-sL-ocl"/>
+                                    <constraint firstItem="bA1-9y-apk" firstAttribute="top" secondItem="1Fx-LZ-1c2" secondAttribute="top" id="vPa-Kv-HPD"/>
+                                </constraints>
                                 <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="qay-0i-2hj" secondAttribute="leading" id="2o5-WU-H5Q"/>
+                            <constraint firstItem="1Fx-LZ-1c2" firstAttribute="top" secondItem="qay-0i-2hj" secondAttribute="bottom" constant="8" id="4fZ-lT-j10"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Fx-LZ-1c2" secondAttribute="trailing" id="AW1-u2-vna"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qay-0i-2hj" secondAttribute="trailing" id="SeQ-Yy-nTV"/>
+                            <constraint firstItem="qay-0i-2hj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Wam-b5-uzm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="1Fx-LZ-1c2" secondAttribute="leading" id="ey0-6M-2Kk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Fx-LZ-1c2" secondAttribute="bottom" priority="250" constant="28" id="iuM-8z-6jB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageScrollview" destination="Yaa-0r-hDz" id="hcz-Eb-ldn"/>
