@@ -31,27 +31,52 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Fx-LZ-1c2">
                                 <rect key="frame" x="16" y="66" width="343" height="573"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jH0-rR-n0u" userLabel="textScrollView">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jH0-rR-n0u" userLabel="textScrollView">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="283"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Write your note here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bA1-9y-apk">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="283" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bA1-9y-apk">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="283"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <mutableString key="text">he key thing to understand is that UIScrollView evaluates its size at runtime based on the content - link needed. For this reason when in IB you will always see it as having 0 width and 0 height (really).
+
+Using a content view with the same width or height as the superview where the scroll view is contained does the trick of allowing us to define the subview’s Auto Layout constraints, but only if the subviews as a whole are pinned to the edges of the content view.
+
+Finally, since we need to use the content view width to set the UIScrollView he key thing to understand is that UIScrollView evaluates its size at runtime based on the content - link needed. For this reason when in IB you will always see it as having 0 width and 0 height (really).
+
+Using a content view with the same width or height as the superview where the scroll view is contained does the trick of allowing us to define the subview’s Auto Layout constraints, but only if the subviews as a whole are pinned to the edges of the content view.
+
+Finally, since we need to use the content view width to set the UIScrollView he key thing to understand is that UIScrollView evaluates its size at runtime based on the content - link needed. For this reason when in IB you will always see it as having 0 width and 0 height (really).
+
+Using a content view with the same width or height as the superview where the scroll view is contained does the trick of allowing us to define the subview’s Auto Layout constraints, but only if the subviews as a whole are pinned to the edges of the content view.
+
+Finally, since we need to use the content view width to set the UIScrollView </mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="bA1-9y-apk" secondAttribute="bottom" id="8pv-6M-FCw"/>
+                                            <constraint firstItem="bA1-9y-apk" firstAttribute="leading" secondItem="jH0-rR-n0u" secondAttribute="leading" id="TnS-XB-u13"/>
+                                            <constraint firstItem="bA1-9y-apk" firstAttribute="top" secondItem="jH0-rR-n0u" secondAttribute="top" id="j1W-wr-HX1"/>
+                                            <constraint firstAttribute="trailing" secondItem="bA1-9y-apk" secondAttribute="trailing" id="jPc-pT-LhC"/>
+                                        </constraints>
                                     </scrollView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaa-0r-hDz" userLabel="imageScrollview">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaa-0r-hDz" userLabel="imageScrollview">
                                         <rect key="frame" x="0.0" y="291" width="343" height="282"/>
                                         <subviews>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Gr-dx-Xaq">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="282" image="photoLibrary" translatesAutoresizingMaskIntoConstraints="NO" id="7Gr-dx-Xaq">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="282"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <gestureRecognizers/>
                                             </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7Gr-dx-Xaq" firstAttribute="leading" secondItem="Yaa-0r-hDz" secondAttribute="leading" id="48G-ZH-pfh"/>
+                                            <constraint firstAttribute="bottom" secondItem="7Gr-dx-Xaq" secondAttribute="bottom" id="MFg-EL-fBW"/>
+                                            <constraint firstItem="7Gr-dx-Xaq" firstAttribute="top" secondItem="Yaa-0r-hDz" secondAttribute="top" id="O4Q-uW-8iC"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Gr-dx-Xaq" secondAttribute="trailing" id="s5v-02-lUp"/>
+                                        </constraints>
                                     </scrollView>
                                 </subviews>
                                 <constraints>
@@ -68,12 +93,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="qay-0i-2hj" secondAttribute="leading" id="2o5-WU-H5Q"/>
-                            <constraint firstItem="1Fx-LZ-1c2" firstAttribute="top" secondItem="qay-0i-2hj" secondAttribute="bottom" constant="8" id="4fZ-lT-j10"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1Fx-LZ-1c2" secondAttribute="trailing" id="AW1-u2-vna"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qay-0i-2hj" secondAttribute="trailing" id="SeQ-Yy-nTV"/>
                             <constraint firstItem="qay-0i-2hj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Wam-b5-uzm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="1Fx-LZ-1c2" secondAttribute="leading" id="ey0-6M-2Kk"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Fx-LZ-1c2" secondAttribute="bottom" priority="250" constant="28" id="iuM-8z-6jB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Fx-LZ-1c2" secondAttribute="bottom" constant="28" id="iuM-8z-6jB"/>
+                            <constraint firstItem="1Fx-LZ-1c2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="ncG-aC-IF5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -88,4 +113,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photoLibrary" width="25" height="25"/>
+    </resources>
 </document>
