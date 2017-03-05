@@ -13,7 +13,7 @@ class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     //MARK: Properties
     @IBOutlet weak var notetitle: UITextField!
     @IBOutlet weak var notebody: UITextView!
-    @IBOutlet weak var viewphoto: UIImageView!
+    @IBOutlet weak var notePhoto: UIImageView!
     @IBOutlet weak var imageScrollview: UIScrollView!
    
     
@@ -74,14 +74,14 @@ class NoteViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         }
         
         // Set photoImageView to display the selected image.
-        viewphoto.image = selectedImage
+        notePhoto.image = selectedImage
         
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
     }
     //MARK: Scroll view delegate methods
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return self.viewphoto
+        return self.notePhoto
     }
 
     
