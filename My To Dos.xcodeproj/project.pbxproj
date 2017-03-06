@@ -17,6 +17,7 @@
 		AD9484DD1E6665C60045BBB8 /* My_To_DosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484DC1E6665C60045BBB8 /* My_To_DosUITests.swift */; };
 		ADE880261E67C76300EF4E7E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE880251E67C76300EF4E7E /* Note.swift */; };
 		ADEB02451E69E7390062A6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADEB02441E69E7390062A6AC /* Assets.xcassets */; };
+		ADF6C8C51E6D8B10006C8239 /* DateTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C8C41E6D8B10006C8239 /* DateTimeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		AD9484DE1E6665C60045BBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE880251E67C76300EF4E7E /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		ADEB02441E69E7390062A6AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADF6C8C41E6D8B10006C8239 /* DateTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				AD9484BC1E6665C60045BBB8 /* AppDelegate.swift */,
 				AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */,
 				AD9484C01E6665C60045BBB8 /* Main.storyboard */,
+				ADF6C8C41E6D8B10006C8239 /* DateTimeViewController.swift */,
 				AD319C721E6BFC3500E2280B /* NoteTableViewController.swift */,
 				AD319C701E6BEFAA00E2280B /* NoteTableViewCell.swift */,
 				ADEB02441E69E7390062A6AC /* Assets.xcassets */,
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD319C731E6BFC3500E2280B /* NoteTableViewController.swift in Sources */,
+				ADF6C8C51E6D8B10006C8239 /* DateTimeViewController.swift in Sources */,
 				AD9484BF1E6665C60045BBB8 /* NoteViewController.swift in Sources */,
 				AD9484BD1E6665C60045BBB8 /* AppDelegate.swift in Sources */,
 				ADE880261E67C76300EF4E7E /* Note.swift in Sources */,

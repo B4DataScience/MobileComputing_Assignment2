@@ -203,7 +203,7 @@
         <!--dateTimeViewController-->
         <scene sceneID="pTU-wT-GqQ">
             <objects>
-                <viewController id="3xf-yk-s5l" userLabel="dateTimeViewController" customClass="NoteTableViewController" customModule="My_To_Dos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3xf-yk-s5l" userLabel="dateTimeViewController" customClass="DateTimeViewController" customModule="My_To_Dos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oSN-ag-bPM"/>
                         <viewControllerLayoutGuide type="bottom" id="r79-1z-d2j"/>
@@ -229,18 +229,27 @@
                                         <state key="normal" title="Low">
                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="lowPrioritySelected:" destination="3xf-yk-s5l" eventType="touchUpInside" id="Ie9-4h-cpK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugc-CI-fzx">
                                         <rect key="frame" x="127.33333333333333" y="0.0" width="119.33333333333336" height="30"/>
                                         <state key="normal" title="Medium">
                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mediumPrioritySelected:" destination="3xf-yk-s5l" eventType="touchUpInside" id="Swr-YQ-xLO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLv-4t-Eq7">
                                         <rect key="frame" x="254.66666666666671" y="0.0" width="119.33333333333329" height="30"/>
                                         <state key="normal" title="High">
                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="highPrioritySelected:" destination="3xf-yk-s5l" eventType="touchUpInside" id="BvL-Eq-OlB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -261,18 +270,27 @@
                                         <state key="normal" title="No Date!">
                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="noDateSelected:" destination="3xf-yk-s5l" eventType="touchUpInside" id="04W-5l-arn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YL-cn-6YP">
                                         <rect key="frame" x="127.33333333333333" y="0.0" width="119.33333333333336" height="30"/>
                                         <state key="normal" title="Immediately">
                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="immediatelySelected:" destination="3xf-yk-s5l" eventType="touchUpInside" id="gbD-u4-tlj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkJ-LK-xZa">
                                         <rect key="frame" x="254.66666666666671" y="0.0" width="119.33333333333329" height="30"/>
                                         <state key="normal" title="Select a date">
                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="dateSelect:" destination="3xf-yk-s5l" eventType="touchUpInside" id="iez-b7-c1q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -302,6 +320,17 @@
                             <constraint firstItem="v7Y-SS-K50" firstAttribute="top" secondItem="NWY-zv-xma" secondAttribute="bottom" constant="8" id="zel-Cl-SRr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateSelectButton" destination="YkJ-LK-xZa" id="8Tv-q7-WJR"/>
+                        <outlet property="dateTextField" destination="dRZ-HJ-pjI" id="enX-9T-o85"/>
+                        <outlet property="dateTimeLabel" destination="w1E-SQ-xjw" id="6eQ-of-9jI"/>
+                        <outlet property="highPriorityButton" destination="HLv-4t-Eq7" id="G4P-7j-DEt"/>
+                        <outlet property="immediatelyButton" destination="8YL-cn-6YP" id="lS5-YV-ihc"/>
+                        <outlet property="lowPriorityButton" destination="8q6-5k-vmW" id="Hzc-az-utb"/>
+                        <outlet property="mediumPriorityButton" destination="ugc-CI-fzx" id="ki3-4T-OWs"/>
+                        <outlet property="noDateButton" destination="lDL-Tb-ww2" id="x6g-CK-fwo"/>
+                        <outlet property="priorityLabel" destination="NWY-zv-xma" id="DK9-F6-cvB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qf2-9u-SWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
