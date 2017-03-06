@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD319C711E6BEFAA00E2280B /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD319C701E6BEFAA00E2280B /* NoteTableViewCell.swift */; };
+		AD319C731E6BFC3500E2280B /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD319C721E6BFC3500E2280B /* NoteTableViewController.swift */; };
 		AD9484BD1E6665C60045BBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484BC1E6665C60045BBB8 /* AppDelegate.swift */; };
 		AD9484BF1E6665C60045BBB8 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */; };
 		AD9484C21E6665C60045BBB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9484C01E6665C60045BBB8 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		AD9484DD1E6665C60045BBB8 /* My_To_DosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9484DC1E6665C60045BBB8 /* My_To_DosUITests.swift */; };
 		ADE880261E67C76300EF4E7E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE880251E67C76300EF4E7E /* Note.swift */; };
 		ADEB02451E69E7390062A6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADEB02441E69E7390062A6AC /* Assets.xcassets */; };
+		ADF02AC31E6D1A6400F42B54 /* dateTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF02AC21E6D1A6400F42B54 /* dateTimeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD319C701E6BEFAA00E2280B /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		AD319C721E6BFC3500E2280B /* NoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
 		AD9484B91E6665C60045BBB8 /* My To Dos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My To Dos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9484BC1E6665C60045BBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		AD9484DE1E6665C60045BBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE880251E67C76300EF4E7E /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		ADEB02441E69E7390062A6AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADF02AC21E6D1A6400F42B54 /* dateTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dateTimeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				AD9484BC1E6665C60045BBB8 /* AppDelegate.swift */,
 				AD9484BE1E6665C60045BBB8 /* NoteViewController.swift */,
 				AD9484C01E6665C60045BBB8 /* Main.storyboard */,
+				ADF02AC21E6D1A6400F42B54 /* dateTimeViewController.swift */,
+				AD319C721E6BFC3500E2280B /* NoteTableViewController.swift */,
+				AD319C701E6BEFAA00E2280B /* NoteTableViewCell.swift */,
 				ADEB02441E69E7390062A6AC /* Assets.xcassets */,
 				ADE880251E67C76300EF4E7E /* Note.swift */,
 				AD9484C51E6665C60045BBB8 /* LaunchScreen.storyboard */,
@@ -265,9 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD319C731E6BFC3500E2280B /* NoteTableViewController.swift in Sources */,
+				ADF02AC31E6D1A6400F42B54 /* dateTimeViewController.swift in Sources */,
 				AD9484BF1E6665C60045BBB8 /* NoteViewController.swift in Sources */,
 				AD9484BD1E6665C60045BBB8 /* AppDelegate.swift in Sources */,
 				ADE880261E67C76300EF4E7E /* Note.swift in Sources */,
+				AD319C711E6BEFAA00E2280B /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
